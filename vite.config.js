@@ -1,6 +1,6 @@
 import { defineConfig } from "vite"
 import react from "@vitejs/plugin-react"
-// import setup from "./test/setup/setup.js"
+
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -8,6 +8,6 @@ export default defineConfig({
   test: {
     globals: true,
     environment: "jsdom",
-    setupFiles: ["./tests/setup/setup.js"],
+    setupFiles: "/test/setup/setup.js",
   },
 })
