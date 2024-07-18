@@ -1,0 +1,29 @@
+:root {
+  /* this has to be set to switch between light or dark */
+  color-scheme: light dark;
+  
+ --light-bg: #FFFFFF;
+ --light-color:  #313338;
+ --light-code: tomato;
+  
+ --dark-bg: #313338;
+ --dark-color: #FFFFFF;
+ --dark-code: gold;
+}
+
+* {
+ background-color: light-dark(var(--light-bg), var(--dark-bg));
+ color: light-dark(var(--light-color), var(--dark-color));
+}
+
+code {
+ color: light-dark(var(--light-code), var(--dark-code));
+}
+
+.light {
+  color-scheme: light;
+}
+
+.dark {
+  color-scheme: dark;
+}
