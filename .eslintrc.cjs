@@ -20,6 +20,14 @@ module.exports = {
     "quotes": [
       "error",
       "single"
-  ]
+  ],
+  'no-unused-vars': [
+    'error',
+    {
+        argsIgnorePattern: '^_',
+        varsIgnorePattern: '^_',
+    },
+  ],
+  'no-undef': 'error',
   },
 }
