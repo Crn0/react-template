@@ -7,7 +7,7 @@ function App() {
   return (
     <div className= {`${currentTheme}`} style={{display: 'grid', placeContent: 'center', height: '100dvh'}}>
      <header>
-        <button onClick={() => setTheme((t) => t === 'light' ? 'dark' : 'light')}>
+        <button type='button' onClick={() => setTheme((t) => t === 'light' ? 'dark' : 'light')}>
           { theme === 'light' ? 'dark mode ': 'light mode' }
          </button>
      </header>
