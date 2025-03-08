@@ -15,8 +15,13 @@ module.exports = {
   plugins: ["react-refresh"],
   rules: {
     "react/jsx-no-target-blank": "off",
-    "react-refresh/only-export-components": ["warn", { allowConstantExport: true }],
-    quotes: ["error", "double"],
+    "react/jsx-props-no-spreading": "off",
+    "react/prop-types": "on",
+    "react-refresh/only-export-components": [
+      "warn",
+      { allowConstantExport: true },
+    ],
+    quotes: ["error", "single"],
     "no-unused-vars": [
       "error",
       {
@@ -24,6 +29,7 @@ module.exports = {
         varsIgnorePattern: "^_",
       },
     ],
+    "react/prop-types": "error",
     "no-undef": "error",
     "import/no-extraneous-dependencies": "off",
     "react/require-default-props": "off",

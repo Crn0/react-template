@@ -1,10 +1,18 @@
-import App from "../App";
+import { createBrowserRouter } from 'react-router-dom';
+import { paths } from '../configs';
+import App from '../App';
+import Template from '../pages/Template';
 
-const routes = [
+const router = createBrowserRouter([
   {
-    path: "/",
-    element: <App />,
+    path: paths.home.path,
+    element: <Template />,
   },
-];
+  {
+    path: paths.app.path,
+    element: <App />,
+    children: [{ index: true, element: <Template /> }],
+  },
+]);
 
-export default routes;
+export default router;
